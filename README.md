@@ -10,10 +10,10 @@
 Spring Cloud包含了多个子项目（针对分布式系统中涉及的多个不同的开源产品，还可能会新增），如下所述：
 - Spring Cloud Config：配置管理工具，支持使用Git存储配置内容，可以使用它实现应用配置的外部化存储，并支持客户端信息刷新、加密/解密配置内容等。
 - Spring Cloud Netflix：核心组件，对多个Netflix OSS套件进行整合。
-&emsp;&emsp; * Eureka：服务治理组件，包含服务注册中心、服务注册与发现机制。
-&emsp;&emsp; * Hystrix：容错管理组件，实现断路器模式，帮助服务依赖中出现的延迟和为故障提供强大的容错能力。
-&emsp;&emsp; * Ribbon：客户端负载均衡的服务调用组件。
-&emsp;&emsp; * Feign：基于Ribbon和Hystrix的声明式服务调用组件。
-&emsp;&emsp; * Zuul：网关组件，提供智能路由、访问过滤等功能。
-&emsp;&emsp; * Archaius：外部化配置组件。
+* &emsp;&emsp;Eureka：服务治理组件，包含服务注册中心、服务注册与发现机制。
+* &emsp;&emsp;Hystrix：容错管理组件，实现断路器模式，帮助服务依赖中出现的延迟和为故障提供强大的容错能力。
+* &emsp;&emsp;Ribbon：客户端负载均衡的服务调用组件。
+* &emsp;&emsp;Feign：基于Ribbon和Hystrix的声明式服务调用组件。
+* &emsp;&emsp;Zuul：网关组件，提供智能路由、访问过滤等功能。
+* &emsp;&emsp;Archaius：外部化配置组件。
 
