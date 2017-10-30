@@ -16,4 +16,17 @@ Spring Cloud包含了多个子项目（针对分布式系统中涉及的多个�
 * &emsp;&emsp;Feign：基于Ribbon和Hystrix的声明式服务调用组件。
 * &emsp;&emsp;Zuul：网关组件，提供智能路由、访问过滤等功能。
 * &emsp;&emsp;Archaius：外部化配置组件。
+- Spring Cloud Bus：事件、消息总线，用于传播集群中的状态变化或事件，以触发后续的处理，比如用来动态刷新配置等。
+- Spring Cloud Cluster：针对Zookeeper、Redis、Hazelcast、Consul的选举算法和通用状态模式的实现。
+- Spring Cloud Cloudfoundry：与Pivotal Cloudfoundry的整合支持。
+- Spring Cloud Consul：服务发现与配置管理工具。
+- Spring Cloud Stream：通过Redis、Rabbit或者Kafka实现的消息微服务，可以通过简单的声明式模型来发送和接收消息。
+- Spring Cloud AWS：用于简化整合Amazon Web Service的组件。
+- Spring Cloud Security：完全工具包，提供在Zuul代理中对OAuth2客户端请求的中继器。
+- Spring Cloud Sleuth：Spring Cloud应用的分布式跟踪实现，可以完美整合Zipkin。
+- Spring Cloud Zookeeper：基于Zookeeper的服务发现与配置管理组件。
+- Spring Cloud Starters：Spring Cloud的基础组件，它是基于Spring Boot风格项目的基础依赖模块。
+- Spring Cloud CLI：用于在Groovy中快速创建Spring Cloud应用的Spring Boot CLI插件。
+- .......
+
 
