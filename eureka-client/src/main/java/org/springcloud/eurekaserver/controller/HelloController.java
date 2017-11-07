@@ -1,8 +1,10 @@
 package org.springcloud.eurekaserver.controller;
 
-import com.netflix.discovery.DiscoveryClient;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -19,5 +21,11 @@ public class HelloController {
     @Resource
     private DiscoveryClient client;
 
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String index() {
+        ServiceInstance instance = client.getLocalServiceInstance();
+        log.info("/hello, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
 
+        return "Hello World";
+    }
 }
