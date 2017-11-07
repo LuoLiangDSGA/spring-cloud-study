@@ -2,6 +2,7 @@ package org.springcloud.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * <p>
  * 应用入口类
  */
-@EnableEurekaServer
+@EnableEurekaClient
 @SpringBootApplication
 public class EurekaServerApplication {
 
