@@ -6,3 +6,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+    #此参数默认为true，如果为false，则不会执行注册操作
+    register-with-eureka: true

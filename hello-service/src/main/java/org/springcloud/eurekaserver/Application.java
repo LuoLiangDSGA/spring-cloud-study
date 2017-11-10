@@ -19,6 +19,10 @@ public class Application {
     /**
      * 启动服务注册中心后，启动此项目，会在注册中心注册名字为hello-service的微服务
      *
+     * 服务提供者在启动的时候会通过发送rest请求的方式将自己注册到Eureka Server上，同时
+     * 带上了自身服务的一些元数据信息，Eureka Server接收到这个rest请求之后，将元数据
+     * 信息存储在一个双层结构的Map中，其中第一层的key是服务名，第二层的key具体服务的实例名。
+     *
      * @param args
      */
     public static void main(String[] args) {
