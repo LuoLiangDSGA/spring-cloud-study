@@ -13,6 +13,9 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://peer2:1112/eureka/
+  server:
+    #本地开发时关闭保护机制，确保注册中心可以将不可用的事例正确剔除
+    enable-self-preservation: false
 spring:
   application:
     name: eureka-server
