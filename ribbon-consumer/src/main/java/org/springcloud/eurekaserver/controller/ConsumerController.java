@@ -1,5 +1,6 @@
 package org.springcloud.eurekaserver.controller;
 
+import org.springcloud.eurekaserver.service.HelloService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,10 +20,10 @@ import javax.annotation.Resource;
 @RestController
 public class ConsumerController {
     @Resource
-    private RestTemplate restTemplate;
+    private HelloService helloService;
 
     @RequestMapping(value = "/ribbon-consumer", method = RequestMethod.GET)
     public String helloConsumer() {
-        return restTemplate.getForEntity("http://HELLO-SERVICE/hello", String.class).getBody();
+        return helloService.helloService();
     }
 }
