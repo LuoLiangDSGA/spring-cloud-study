@@ -2,6 +2,7 @@ package org.springcloud.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 //注册为eureka客户端应用，以获取服务发现的能力
 @EnableDiscoveryClient
+@EnableCircuitBreaker
 @SpringBootApplication
 public class Application {
 
