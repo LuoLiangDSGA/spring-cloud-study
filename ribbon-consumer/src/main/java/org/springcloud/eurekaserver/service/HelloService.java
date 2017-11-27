@@ -27,6 +27,10 @@ public class HelloService {
         return restTemplate.getForObject("http://HELLO-SERVICE/hello", String.class);
     }
 
+    /**
+     * 错误处理方法
+     * @return
+     */
     public String helloFallback() {
         return "hystrix";
     }
