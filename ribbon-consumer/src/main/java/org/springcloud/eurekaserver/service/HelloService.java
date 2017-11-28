@@ -20,6 +20,7 @@ public class HelloService {
     /**
      * HystrixCommand：用在依赖的服务返回单个操作结果的时候
      * HystrixObserVableCommand：用在依赖的服务返回多个操作结果的时候
+     *
      * @return
      */
     @HystrixCommand(fallbackMethod = "helloFallback")
@@ -29,6 +30,7 @@ public class HelloService {
 
     /**
      * 错误处理方法
+     *
      * @return
      */
     public String helloFallback() {
