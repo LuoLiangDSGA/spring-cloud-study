@@ -27,6 +27,5 @@ Spring Cloud包含了多个子项目（针对分布式系统中涉及的多个�
 - Spring Cloud Zookeeper：基于Zookeeper的服务发现与配置管理组件。
 - Spring Cloud Starters：Spring Cloud的基础组件，它是基于Spring Boot风格项目的基础依赖模块。
 - Spring Cloud CLI：用于在Groovy中快速创建Spring Cloud应用的Spring Boot CLI插件。
-- .....
-
+- ......
 
