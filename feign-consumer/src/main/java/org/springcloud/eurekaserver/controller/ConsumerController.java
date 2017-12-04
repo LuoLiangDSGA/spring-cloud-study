@@ -1,5 +1,6 @@
 package org.springcloud.eurekaserver.controller;
 
+import org.springcloud.eurekaserver.model.User;
 import org.springcloud.eurekaserver.service.HelloService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,5 +26,15 @@ public class ConsumerController {
     @RequestMapping(value = "/feign-consumer", method = RequestMethod.GET)
     public String helloConsumer() {
         return helloService.hello();
+    }
+
+    @RequestMapping(value = "/feign-consumer2", method = RequestMethod.GET)
+    public String helloConsumer2() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(helloService.hello()).append("\n");
+        sb.append(helloService.hello("LUOLIANG")).append("\n");
+        sb.append(helloService.hello("LUOLIANG", 18)).append("\n");
+        sb.append(helloService.hello(new User("LUOLIANG", 18))).append("\n");
+        return sb.toString();
     }
 }
