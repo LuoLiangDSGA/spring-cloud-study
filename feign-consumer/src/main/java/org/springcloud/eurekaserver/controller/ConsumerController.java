@@ -22,7 +22,7 @@ public class ConsumerController {
     @Resource
     private HelloService helloService;
 
-    @RequestMapping(value = "/feign-comsumer", method = RequestMethod.GET)
+    @RequestMapping(value = "/feign-consumer", method = RequestMethod.GET)
     public String helloConsumer() {
         return helloService.hello();
     }
