@@ -11,11 +11,5 @@ import org.springframework.web.client.RestTemplate;
  * @author luoliang
  * @date 2017/11/10
  **/
-@Configuration
 public class ConsumerConfig {
-    @Bean
-    @LoadBalanced
-    RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 }

@@ -1,46 +1,19 @@
 package org.springcloud.eurekaserver.service;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCollapser;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
-import javax.annotation.Resource;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created by IntelliJ IDEA.
  *
  * @author luoliang
  * @date 2017/11/24
+ * 服务名不区分大小写
  **/
-@Service
-public class HelloService {
-    @Resource
-    private RestTemplate restTemplate;
+@FeignClient("hello-service")
+public interface HelloService {
 
-    @HystrixCollapser(batchMethod = "helloService", collapserProperties = {@HystrixProperty(name = "timeDelayInMilliseconds", value = "100")})
-    public String find() {
-        return null;
-    }
-
-    /**
-     * HystrixCommand：用在依赖的服务返回单个操作结果的时候
-     * HystrixObserVableCommand：用在依赖的服务返回多个操作结果的时候
-     *
-     * @return
-     */
-    @HystrixCommand(fallbackMethod = "helloFallback")
-    public String helloService() {
-        return restTemplate.getForObject("http://HELLO-SERVICE/hello", String.class);
-    }
-
-    /**
-     * 错误处理方法
-     *
-     * @return
-     */
-    public String helloFallback() {
-        return "hystrix";
-    }
+    @RequestMapping("hello")
+    String hello();
 }
