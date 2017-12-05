@@ -10,3 +10,12 @@ eureka:
 spring:
   application:
     name: feign-consumer
+
+HELLO-SERVICE:
+  ribbon:
+    ConnectTimeout: 500
+    ReadTime: 2000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNextServer: 2
+    MaxAutoRetries: 1
+
