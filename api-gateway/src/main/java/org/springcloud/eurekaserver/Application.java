@@ -5,16 +5,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * @author luoliang
  * <p>
- * 消费者应用入口类
+ * api网关应用入口类
  * <p>
  *
  */
-@EnableDiscoveryClient
-@EnableFeignClients
+@EnableZuulProxy
 @SpringBootApplication
 public class Application {
 
