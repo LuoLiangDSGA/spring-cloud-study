@@ -10,12 +10,13 @@ eureka:
 spring:
   application:
     name: api-gateway
-
+#使用path和url映射关系来配置路由规则的时候，对于路由转发的请求不会采用HistrixCommand来包装，所以
+#这类路由不会有负载均衡的能力
 zuul:
   routes:
     api-a:
       path: /api-a/**
-      url: hello-service
+      serviceId: hello-service
     api-b:
       path: /api-b/**
       url: feign-consumer
