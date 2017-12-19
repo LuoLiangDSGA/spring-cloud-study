@@ -13,8 +13,8 @@ spring:
     config:
       server:
         git:
-          uri:
-          search-paths:
-          username:
-          password:
+          uri: https://github.com/LuoLiangDSGA/spring-cloud-study
+          search-paths: config-repo
+          username: ll9420416@outlook.com
+          password: Ll13145401
 
