@@ -1,0 +1,20 @@
+
+server:
+  port: 7001
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          search-paths:
+          username:
+          password:
+
