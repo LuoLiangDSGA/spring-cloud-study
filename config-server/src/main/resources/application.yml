@@ -16,5 +16,5 @@ spring:
           uri: https://github.com/LuoLiangDSGA/spring-cloud-study
           search-paths: config-repo
           username: ll9420416@outlook.com
-          password: 
+          password:
 
