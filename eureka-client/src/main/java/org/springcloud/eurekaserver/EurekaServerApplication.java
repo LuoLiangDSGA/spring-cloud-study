@@ -9,7 +9,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * <p>
  * 应用入口类
  */
-//通过EnableDiscoveryClient注解，激活Eureka中的DiscoveryClient实现
+/**
+ * 通过EnableDiscoveryClient注解，激活Eureka中的DiscoveryClient实现
+ */
 @EnableDiscoveryClient
 @SpringBootApplication
 public class EurekaServerApplication {

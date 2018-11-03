@@ -10,6 +10,8 @@ import org.springframework.web.client.RestTemplate;
  *
  * @author luoliang
  * @date 2017/11/10
+ *
+ * 创建一个支持负载均衡的REST模板
  **/
 @Configuration
 public class ConsumerConfig {
