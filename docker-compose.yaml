@@ -1,0 +1,16 @@
+version: '3'
+services:
+  eureka-server:
+    container_name: eureka-server
+    image: eureka-server
+    build: ./eureka-server
+    ports: 
+      - "1111:1111"
+  eureka-client:
+    container_name: eureka-client
+    image: eureka-client
+    build: ./eureka-client
+    ports: 
+      - "8080:8080"
+    links:
+    - eureka-server
