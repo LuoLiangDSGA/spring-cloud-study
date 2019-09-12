@@ -1,4 +1,4 @@
-package org.springboot.cloud.authservice;
+package org.springboot.cloud;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
